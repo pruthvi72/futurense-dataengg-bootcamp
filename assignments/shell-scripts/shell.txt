@@ -1,0 +1,20 @@
+[ -d "./assignments" ] && rm -r assignments
+echo "ASSIGNMENT 1"
+mkdir assignments
+cd assignments
+touch cities.txt
+echo "Enter 5 Cities Name: "
+a=5
+while [ $a -gt 0 ]
+do
+        read cityname
+        echo $cityname >> cities.txt
+        a=`expr $a - 1`
+done
+echo "The Cities are: "
+cat cities.txt
+echo "Cities that contain new in them: "
+cat cities.txt | grep -i new
+grep -i new cities.txt | sed 's/new/old/I' >> old_cities.txt
+echo "And the Old_cities file contain"
+cat old_cities.txt
