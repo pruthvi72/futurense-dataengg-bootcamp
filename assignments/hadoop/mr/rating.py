@@ -10,8 +10,6 @@ class NumOfRatings(MRJob):
                         
         # Reducer Function
         def reducer(self, rate, counts):
-		if rate = "rating":
-			continue
                 yield(rate, sum(counts))
 
 if __name__ == '__main__':
