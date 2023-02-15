@@ -4,7 +4,6 @@ class NumOfRatings(MRJob):
 
         # Mapper Function
         def mapper(self, _, line):
-        	#print(line.split('\t'))
                 (userID,movieID, rating, timestamp) = line.split(',')
                 yield(rating, 1)
                         
